@@ -1,0 +1,18 @@
+{
+  "name": "database-api",
+  "version": "1.0.0",
+  "description": "learn",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Assam Asim",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "knex": "^2.5.1",
+    "mysql": "^2.18.1",
+    "mysql2": "^3.5.2"
+  }
+}
