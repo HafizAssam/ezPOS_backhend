@@ -1,4 +1,6 @@
 const mysql = require ('mysql')
+const util = require('util');
+
 const mysql2 = require ('mysql2')
 const con = mysql.createConnection({
 host : "localhost",
@@ -17,6 +19,7 @@ const knex = require('knex')({
       database : 'ez_pos'
     }
   });
+  const query = util.promisify(con.query).bind(con);
 
 con.connect((err)=>{
 
@@ -28,6 +31,6 @@ if(err){
 })
 
 module.exports={
-    knex,
-    con
+
+con,query
 }
